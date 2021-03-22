@@ -15,6 +15,9 @@
       <a href="#about">About</a>
     </li>
     <li>
+      <a href="#try-it-out">Try it out</a>
+    </li>
+    <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#installation">Installation</a></li>
@@ -38,6 +41,11 @@ The nearest monitoring station can be searched:
 
 
 A useful app with a nice graphics.
+
+
+## Try it out
+
+Take a look at my app - https://project-aqd.web.app
 
 
 ## Getting Started
