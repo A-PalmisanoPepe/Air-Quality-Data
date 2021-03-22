@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="">
-    <img src="img/i.png" alt="Logo" width="80" height="80">
+    <img src="src/img/i.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Air-Quality-Data</h3>
