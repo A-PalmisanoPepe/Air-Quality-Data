@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Air Quality Data</title>
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-responsive.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+</head>
+
+<body>
+
+    <nav class="nav-bar">
+        <img class="logo" src="img/icon.png">
+
+        <div id="searcher-container">
+            <div id="geolocator">
+                <img id="pointer" src="img/pointer.png">
+
+                <h2>Geolocator</h2>
+            </div>
+
+            <div id="placeholder">
+                <li class="dropdown"><img id="glass" src="img/glass.png">
+                    <input id="city-name" type="text" placeholder="City or Keyword" name="city">
+
+                    <ul id="submenu" class="submenu"></ul>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="flip-card" id="flip-card">
+            <div class="flip-card-inner flip-card-inner-responsive" id="flip-card-inner">
+                <div class="flip-card-front" id="flip-card-front">
+                    <h1 id="title-1">REAL-TIME AIR QUALITY DATA</h1>
+
+                    <div id="flower-card"><img class="flower" src="img/flower.png"></div>
+
+                    <div class="info-container-tablet tablet">
+                        <div class="info">
+                            <div class="flower-info-container">
+                                <h3>ABOUT THE AIQ LEVELS</h3>
+                            </div>
+
+                            <div class="flower-info-container">
+                                <div class="flower-info green">
+                                    <img class="flower-info" src="img/flower-info.png">
+                                </div>
+                
+                                <h5>AIQ: 0-50 <br>GOOD</h5>
+                            </div>
+                
+                            <div class="flower-info-container">
+                                <div class="flower-info yellow">
+                                    <img class="flower-info" src="img/flower-info.png">
+                                </div>
+                
+                                <h5>AIQ: 51-100 <br>MODERATE</h5>
+                            </div>
+                
+                            <div class="flower-info-container">
+                                <div class="flower-info orange">
+                                    <img class="flower-info" src="img/flower-info.png">
+                                </div>
+                
+                                <h5>AIQ: 101-150 <br>UNHEALTHY FOR SENSITIVE GROUP</h5>
+                            </div>
+                            
+                            <div class="flower-info-container">
+                                <div class="flower-info red">
+                                    <img class="flower-info" src="img/flower-info.png">
+                                </div>
+                
+                                <h5>AIQ: 151-200 <br>UNHEALTHY</h5>
+                            </div>
+                
+                            <div class="flower-info-container">
+                                <div class="flower-info purple">
+                                    <img class="flower-info" src="img/flower-info.png">
+                                </div>
+                
+                                <h5>AIQ: 201-300 <br>VERY UNHEALTHY</h5>
+                            </div>
+                
+                            <div class="flower-info-container">
+                                <div class="flower-info darkpurple">
+                                    <img class="flower-info" src="img/flower-info.png">
+                                </div>
+                
+                                <h5>AIQ: 300+ <br>HAZARDOUS</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card-back" id="flip-card-back">
+                    <div id="title-2">
+                        <h1>Real-time Air Quality Data</h1>
+                    </div>
+
+                    <div id="data-display">
+                        <div id="tables-container">
+                            <div id="relevation-data">
+                                <h2 class="data"></h2>
+                                <h3 class="data"></h3>
+                                <h4 class="data"></h4>
+                            </div>
+
+                            <div id="aqi-container">
+                                <h2 id="aqi-title"></h2>
+
+                                <div id="aqi" class="data"></div>
+                            </div>
+
+                            <table id="air-quality-data">
+                                <thead><b class="thead"></b></thead>
+                                <tr class="data"></tr>
+                                <tr class="data"></tr>
+                                <tr class="data"></tr>
+                            </table>
+
+                            <table id="weather-data">
+                                <thead><b class="thead"></b></thead>
+                                <tr class="data"></tr>
+                                <tr class="data"></tr>
+                                <tr class="data"></tr>
+                                <tr class="data"></tr>
+                            </table>
+                        </div>
+
+                        <div class="map-container">
+                            <div class='map-instruction'>Double click on a location to get further data.</div>
+
+                            <div><img class='expand' src="img/expand.png"></div>
+
+                            <div><img class='expand-tablet' src="img/expand.png"></div>
+
+                            <div><img class='reduce' src="img/reduce.png"></div>
+
+                            <div id='map'></div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="flower-background" class="flower"><img src="img/background.png"></div>
+    <div class="info-container">
+        <div class="info">
+            <div class="flower-info-container">
+                <h3>ABOUT THE AIQ LEVELS</h3>
+            </div>
+
+            <div class="flower-info-container">
+                <div class="flower-info green">
+                    <img class="flower-info" src="img/flower-info.png">
+                </div>
+
+                <h5>AIQ: 0-50 <br>GOOD</h5>
+            </div>
+
+            <div class="flower-info-container">
+                <div class="flower-info yellow">
+                    <img class="flower-info" src="img/flower-info.png">
+                </div>
+
+                <h5>AIQ: 51-100 <br>MODERATE</h5>
+            </div>
+
+            <div class="flower-info-container">
+                <div class="flower-info orange">
+                    <img class="flower-info" src="img/flower-info.png">
+                </div>
+
+                <h5>AIQ: 101-150 <br>UNHEALTHY FOR SENSITIVE GROUP</h5>
+            </div>
+            
+            <div class="flower-info-container">
+                <div class="flower-info red">
+                    <img class="flower-info" src="img/flower-info.png">
+                </div>
+
+                <h5>AIQ: 151-200 <br>UNHEALTHY</h5>
+            </div>
+
+            <div class="flower-info-container">
+                <div class="flower-info purple">
+                    <img class="flower-info" src="img/flower-info.png">
+                </div>
+
+                <h5>AIQ: 201-300 <br>VERY UNHEALTHY</h5>
+            </div>
+
+            <div class="flower-info-container">
+                <div class="flower-info darkpurple">
+                    <img class="flower-info" src="img/flower-info.png">
+                </div>
+
+                <h5>AIQ: 300+ <br>HAZARDOUS</h5>
+            </div>
+        </div>
+
+        <div class="button-info"><img class="button-info" src="img/i.png"></div>
+    </div>
+
+    <div class="footer">
+        <h6>Data provided by <a href="https://waqi.info/" target="_blank">World Air Quality Index</a>. </h6> 
+            
+        <h6>Website developed by <a href="https://www.linkedin.com/in/annaluciapalmisanopepe" target="_blank">A. Palmisano Pepe</a>.</h6> 
+    </div>
+
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

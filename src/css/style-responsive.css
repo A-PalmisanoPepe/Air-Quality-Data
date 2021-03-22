@@ -1,0 +1,362 @@
+@media only screen and (max-height: 670px) and (min-width: 1499px) {
+    html, body {
+        height: unset;
+        position: relative;
+    }
+
+    body {
+        overflow-y: auto;
+    }
+
+    .container {
+        position: relative;
+        height: 1140px;
+        padding-bottom: 503px;
+    }
+
+    /* CONTAINER INFO */
+
+    .info-container {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100vw;
+        height: 503px;
+        padding-bottom: 45px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .button-info { 
+        display: none;
+    }
+    
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: relative;
+        width: 100vw;
+        height: auto;
+        padding: 30px 40vw;
+        color: rgb(42, 40, 40);
+        background-color: lightseagreen;
+        margin-bottom: 0;
+    }
+
+    .info-container:hover .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: relative;
+        width: 100vw;
+        height: auto;
+        padding: 30px 40vw;
+        color: rgb(42, 40, 40);
+        background-color: lightseagreen;
+        box-shadow: none;
+        margin-bottom: 0;
+    }
+    
+    .flower-info {
+        display: flex;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .flower-info-container {
+        display: flex;
+        align-items: center;
+        width: auto;
+        height: auto;
+    }
+
+    /* FOOTER */
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+    }
+    
+}
+
+@media only screen and (max-width: 1500px) {
+    html, body {
+        height: unset;
+        position: relative;
+    }
+
+    body {
+        overflow-y: auto;
+    }
+
+    .container {
+        min-height: 1330px;
+        height: 100vh;
+        padding-bottom: 100px;
+    }
+
+    /* NAVIGATION BAR */
+
+    #city-name, .submenu > li {
+        width: 156px;
+    }
+
+    /* FLIPCARD EFFECT */
+
+    .flip-card {
+        background-color: transparent;
+        width: 360px;
+        height: 1115px;
+        perspective: 1000px;
+    }
+    
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        background-color: lavender;
+        border: 3px solid rgb(42, 40, 40);
+    }
+    
+    .flip-card-front {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+    
+    .flip-card-back {
+        transform: rotateY(180deg);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+    
+    .flip-card-inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        transition: transform 2s ease;
+        transform-style: preserve-3d;
+    }
+    
+    .flip-card-inner-active { 
+        transform: rotateY(180deg);
+    }
+
+    /* FLIPCARD-FRONT */
+
+    #title-1 {
+        font-size: 38px;
+        text-align: center;
+        margin: 50px;
+    }
+
+    #flower-card {
+        margin: unset;
+        margin-bottom: unset;
+    }
+
+    /* FLIPCARD-BACK */
+
+    .map-container {
+        margin-top: 30px;
+        height: 485px;
+        transition: none;
+    }
+
+    .map-instruction-active {
+        font-size: 11px;
+        margin-right: 35px;
+        height: 35px;
+        transition: height 1s, font-size 1s;
+    }
+
+    .expand {
+        display: none;
+    }
+
+    .expand-tablet {
+        display: flex;
+    }
+
+    .reduce {
+        transition: none;
+    }
+
+    #data-display {
+        flex-direction: column;
+        max-width: 260px;
+        margin: 20px auto;
+    }
+
+    #tables-container {
+        height: unset;
+        margin-right: unset;
+        margin: 20px auto;
+    }
+
+    /* CONTAINER INFO */
+
+    .button-info {
+        display: none;
+    }
+
+    .info-container {
+        display: none;
+    }
+
+    .info-container-tablet {
+        display: flex;  
+        position: relative;
+        margin-top: 150px;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .tablet h3 {
+        display: block;
+        text-align: center;
+    }
+
+    .tablet .info {
+        display: flex; 
+        height: 470px;
+        width: 300px;
+        padding: 30px;
+        color: unset;
+        box-shadow: none;
+    }
+
+    .tablet .flower-info-container {
+        display: flex;
+        align-items: center;
+        width: auto;
+        height: auto;
+        color: unset;
+        margin-bottom: 10px;
+    }
+
+    .tablet .flower-info {
+        display: flex;
+        width: 50px;
+        height: 50px;
+    }
+
+    a {
+        height: auto;
+        color: rgb(42, 40, 40);
+    }
+
+    a:hover, a:active {
+        color: lavender;
+    }
+
+    /* FOOTER */
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        background-color: lightseagreen;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+
+    /* NAVIGATION BAR */
+
+    .nav-bar {
+        flex-direction: row-reverse;
+    }
+
+    .submenu {
+        top: 38px;
+    }
+
+    .logo {
+        margin: auto 5px auto 0;
+        height: 50px;
+        width: 50px;
+    }
+
+    #glass {
+        margin: auto 7px;
+    }
+
+    #pointer {
+        margin: auto ;
+    }
+
+    #searcher-container {
+        flex-direction: row-reverse;
+    }
+
+    #geolocator h2 {
+        display: none;
+    }
+
+    #placeholder {
+        margin: auto 20px auto auto;
+    }
+
+    .submenu > li {
+        width: calc(100vw - 112px);
+    }
+
+    /* FLIPCARD EFFECT */
+
+    .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 1200px;
+        perspective: 1000px;
+    }
+
+    /* FLIPCARD FRONT CONTENT */
+
+    #title-1{
+        font-size: 40px;
+    }
+
+    #flower-card {
+        width: 150px;
+        height: 150px;
+    }
+
+    #flower-card > img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .tablet .info {
+        width: 260px;
+    }
+
+    /* FLIPCARD BACK CONTENT */
+
+    .map-container {
+        width: 260px;
+    }
+    
+    /* FOOTER */
+
+    h6 {
+        font-size: 12px;
+    }
+
+}
